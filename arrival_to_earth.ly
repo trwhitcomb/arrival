@@ -13,7 +13,7 @@
 }
 
 %#(set-global-staff-size 20)
-#(set-default-paper-size "letter")	
+#(set-default-paper-size "letter")  
 
 doublebar = { \bar "||" }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,18 +159,18 @@ mainThemeLowerVariation =
       % crash land into stadiums, fields, and garages
       \relative c'
       {
-	g4
-	\repeat volta 2
-	{
-	  \once \override Score . RehearsalMark #'self-alignment-X = #left
-	  \mark \markup { \italic {"(second time 8va)"} }
-	  \mainThemeUpper
-	}
-	\alternative
-	{
-	  { \mainThemeUpperFirstEnding  }
-	  { \mainThemeUpperSecondEnding }
-	}
+    g4
+    \repeat volta 2
+    {
+      \once \override Score . RehearsalMark #'self-alignment-X = #left
+      \mark \markup { \italic {"(second time 8va)"} }
+      \mainThemeUpper
+    }
+    \alternative
+    {
+      { \mainThemeUpperFirstEnding  }
+      { \mainThemeUpperSecondEnding }
+    }
       }
       \doublebar
 
@@ -185,7 +185,7 @@ mainThemeLowerVariation =
       % rolls out as an Hummer H2 search-and-rescue vehicle
       \relative c'
       {
-	\transformTransitionUpper
+    \transformTransitionUpper
       }
       \doublebar
 
@@ -194,14 +194,14 @@ mainThemeLowerVariation =
       \key d \minor
       \transpose c d
       {
-	\relative c
-	{
-	  \mainThemeUpper
-	  \mainThemeUpperSecondEnding
-	}
+    \relative c
+    {
+      \mainThemeUpper
+      \mainThemeUpperSecondEnding
+    }
       }
       \doublebar
-	
+    
       % There are a few key changes here as well, but they can all
       % be captured with a two-flat key signature so there is no
       % need to use accidentals 
@@ -211,25 +211,30 @@ mainThemeLowerVariation =
       \relative c
       {
         % Ironhide comes out of the water
-	<bes d f bes>2. <c f a c>4 <d f bes d>1
-	<bes ees g>2. <c f a c>4 <bes d g bes>1
-	<bes d g bes>2. <d f bes d>4 <c f a c>1
+    <bes d f bes>2. <c f a c>4 <d f bes d>1
+    <bes ees g>2. <c f a c>4 <bes d g bes>1
+    <bes d g bes>2. <d f bes d>4 <c f a c>1
         % "Excuse me - are you the tooth fairy?"
       }
 
-      \clef treble
+      %\clef treble
       \relative c'
       {
-	% "What happened to the pool!??!?!?!"
-	<ees g bes ees>1
-	<d g bes d>2 c4 d4 
-	<< { r4 bes'4 a4 g4 } \\ <g, bes ees>1 >>
-	<< { r4 c'4 bes4 a4 } \\ <a, c f>1     >>
-	<< { r4 bes'4 a4 g4 } \\ <bes, ees g>1 >>
-	<d fis a>1
-	% Optimus Prime spots the Peterbilt truck and transforms
-	<bes d g>1
-	d16 d ees ees d d ees ees d d ees ees d d ees ees
+    % "What happened to the pool!??!?!?!"
+    << { \poolTransitionUpper } \\ <ees, g bes>1 >>
+    << { bes'8 bes16 bes16 bes8 bes8 bes8 bes8 bes16 bes16 bes8 } \\
+        <d, g bes>1 >>
+    <g, bes ees>4 bes'4 a4 g4
+    <a, c f>4 c'4 bes4 a4
+    <bes, ees g>4 bes'4 a4 g4
+    %<< { r4 bes'4 a4 g4 } \\ <g, bes ees>1 >>
+    %<< { r4 c'4 bes4 a4 } \\ <a, c f>1     >>
+    %<< { r4 bes'4 a4 g4 } \\ <bes, ees g>1 >>
+    <d fis a>1
+    % Optimus Prime spots the Peterbilt truck and transforms
+    <bes d g>1
+    r1 
+    r1
       }
 
       
@@ -240,20 +245,20 @@ mainThemeLowerVariation =
       \clef bass
       \relative c
       {
-	d16 d ees ees d4 g4 a4 bes8 c8 d4 c2.
-	c,4 f4 a4 c8 d8 ees4 bes2.
-	ees,4 a8 g8 f4 g2 g2
+    r4 d4 g4 a4 bes8 c8 d4 c2( c4)
+    c,4 f4 a4 c8 d8 ees4 bes2( bes4)
+    ees,4 a8 g8 f4 g2 g2
 
         % Optimus begins to transform
-	d4 g4 bes2 bes2
-	f4 bes4 c2 
+    d4 g4 bes2 bes2
+    f4 bes4 c2 
 
-	%%% START WORK
-	c4 bes8 a8
+    %%% START WORK
+    c4 bes8 a8
 
-	% Rest of the Autobots transform
-	g2 f4 g4 a2 d,4 g4 g2 f4 g4 d2 c4 bes4 bes2 c4 d4 d4 d4 fis4
-	a4 <g c>2 f4 g4 a2 bes4 a4 d,4 g4 g4 a4 bes2 g2 a1 g1
+    % Rest of the Autobots transform
+    g2 f4 g4 a2 d,4 g4 g2 f4 g4 d2 c4 bes4 bes2 c4 d4 d4 d4 fis4
+    a4 <g c>2 f4 g4 a2 bes4 a4 d,4 g4 g4 a4 bes2 g2 a1 g1
       }
 
       % "Are you Samuel James Witwicky, descendant of Archibald Witwicky?"
@@ -275,27 +280,27 @@ mainThemeLowerVariation =
       % Bumblebee runs through the gate: Sam and Mikaela get out
       \relative c
       {
-	\jump \jump \jump \jump
-	\jump \jump \jump \jump
-	\jump \jump \jump \jump
-	\jump \jump \jump \jump
-	\jump \jump \jump \jump
-	\jump \jump c4 r4
+    \jump \jump \jump \jump
+    \jump \jump \jump \jump
+    \jump \jump \jump \jump
+    \jump \jump \jump \jump
+    \jump \jump \jump \jump
+    \jump \jump c4 r4
       }
 
       % Autobots enter the atmosphere - on second repeat, see them
       % crash land into stadiums, fields, and garages
       \repeat volta 2
       {
-	\relative c
-	{
-	  \mainThemeLower
-	}
+    \relative c
+    {
+      \mainThemeLower
+    }
       }
       \alternative
       {
-	{ \relative c, { \mainThemeLowerFirstEnding  } }
-	{ \relative c, { \mainThemeLowerSecondEnding } }
+    { \relative c, { \mainThemeLowerFirstEnding  } }
+    { \relative c, { \mainThemeLowerSecondEnding } }
       }
       \doublebar
 
@@ -310,7 +315,7 @@ mainThemeLowerVariation =
       % rolls out as an Hummer H2 search-and-rescue vehicle
       \relative c
       {
-	\transformTransitionLower
+    \transformTransitionLower
       }
       \doublebar
 
@@ -319,10 +324,10 @@ mainThemeLowerVariation =
       \key d \minor
       \transpose c d
       {
-	\relative c,
-	{
-	  \mainThemeLowerVariation
-	}
+    \relative c,
+    {
+      \mainThemeLowerVariation
+    }
       }
       \doublebar
 
@@ -333,16 +338,32 @@ mainThemeLowerVariation =
       \relative c
       {
         % Ironhide comes out of the water
-	<bes f' bes>2. <f c' f>4 <bes f' bes>1
-	<ees, bes' ees>2. <f c' f>4 <g d' g>1
-	<bes d g>2. <bes d f>4 <c f a>1
+    <bes f' bes>2. <f c' f>4 <bes f' bes>1
+    <ees, bes' ees>2. <f c' f>4 <g d' g>1
+    <bes d g>2. <bes d f>4 <c f a>1
         % "Excuse me - are you the tooth fairy?"
       }
 
       % "What happened to the pool!??!?!?!"
-      \poolTransitionUpper
-      \poolTransitionUpper 
-      \poolTransitionUpper 
+      \relative c,
+      {
+        <ees ees,>1 
+        <g g,>2 <c c,>4 <d d,>4
+        ees,8 ees16 ees16 ees8 ees8 ees8 ees8 ees8 ees8
+        f8 f16 f16 f8 f8 f8 f8 f8 f8
+        ees8 ees16 ees16 ees8 ees8 ees8 ees8 ees8 ees8
+        <d d'>1
+        <g g'>
+        d'16 d ees ees d d ees ees d d ees ees d d ees ees
+        d d ees ees d d ees ees d d c c bes bes a a
+        g g bes bes g g bes bes g g bes bes g g bes bes
+        f f bes bes f f bes bes f f a a f f a a
+        f f a a f f a a f f a a f f a a
+        g g c c g g c c ees, ees g g ees ees g g 
+        ees ees g g ees ees g g ees ees g g ees ees g g
+        g g bes bes g g bes bes g g bes bes g g bes bes
+      }
+  r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 
 %       <bes ees g>1
 %       <bes d g>1
 %       <bes ees g>1
